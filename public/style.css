@@ -1,0 +1,460 @@
+/*########################## 
+######### RESET CSS ########
+############################ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*##################################
+ ######### FONT IMPORT #############
+###################################*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@font-face {
+    font-family: 'font-awesome';
+    font-size: 'normal';
+    font-weight: 'normal';
+}
+
+
+
+/* ##############################
+######### MAIN STYLES #########
+################################# */
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    /* font-size: inherit; */
+    line-height: 1.5;
+    color: #000;
+}
+
+
+
+body {
+    background-color:#fff ;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+/* ##############################
+############# HEADER ############
+################################# */
+
+
+.page-header {
+    height:70px;
+    width: 100%;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #aaa;
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+}
+
+.wrapper {
+    width:1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ######## BRAND ######## */
+
+.brand {
+    height: 100%;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand h1 {
+    padding:0 auto;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+
+/* ##############################
+############# MAIN NAV ############
+ ################################# */
+
+
+.main-nav {
+    height: 100%;
+    width:70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ######## SEARCH ######## */
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    height: 100%;
+    width: 60%;
+    
+
+}
+
+.search-bar {
+    width:40px;
+    height: 40px;
+    padding-left: 13px;
+    border:1px solid #2883d7;
+    border-radius:50%;
+    background: radial-gradient(circle, #52cded 0%, #2883d7 100%);
+    outline: none;
+    transition: 1s ease-in-out;
+    margin-left:20px;
+    
+    
+}
+
+.search-bar:focus {
+    padding:15px;
+    width:300px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #52cded 0%, #2883d7 100%);
+    font-size:1.2rem;
+}
+
+.fa-search {
+    position:absolute;
+    top:28px;
+    padding:-30px 0 10px 10px;
+    margin-right: 20px;
+    font-size: 1.3em;
+} 
+
+
+
+/* ######## SIGN-IN TAB ######## */
+
+.sign-in-tab {
+    height: 100%;
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.sign-in-tab:hover {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    cursor: pointer;
+    
+}
+
+
+
+
+
+/* ######## SIGN IN MODAL FOR EXISTING USER ######## */
+
+
+.signin-input-div, .signin-input-div-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position:absolute;
+    top:100px;
+    right:50px;
+    width:400px;
+    height:300px;
+    padding-left:30px ;
+    background-color: rgba(205,183,242,0.8);
+}
+
+.signin-input-div {
+    visibility: hidden;
+    
+}
+
+.signin-input-div-show {
+    visibility: visible;
+}
+
+.username-signin-div,.password-signin-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:20px ;
+}
+
+
+.username-signin-label {
+    padding-right: 20px;
+}
+
+
+.password-signin-label  {
+    padding-right: 28px;
+}
+
+.username-signin-input,.password-signin-input {
+    outline: none;
+}
+
+.username-signin-input:focus, .password-signin-input:focus  {
+    background-color:#efc1f4;
+    padding:0 10px;
+    box-sizing: border-box;
+    border-radius:5px;
+}
+
+
+
+.signin-signup-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    
+}
+
+.signin-signup-buttons button {
+    background-color: #df82e8;
+    cursor: pointer;
+}
+
+.close-signin-form-modal {
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-size: 1.2rem;
+}
+
+.close-signin-form-modal:hover {
+    transform: scale(2);
+    cursor: pointer;
+    color:#f00;
+}
+
+/* ######## SIGN UP MODAL FOR NEW USER ######## */
+
+.signup-input-div, .signup-input-div-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position:absolute;
+    top:100px;
+    right:50px;
+    width:400px;
+    height:300px;
+    padding-left:30px ;
+    background-color: rgba(230,161,216,0.8);
+}
+
+.signup-input-div {
+    visibility: hidden;
+    
+}
+
+.signup-input-div-show {
+    visibility: visible;
+}
+
+.username-signup-div,.password-signup-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:20px ;
+}
+
+
+.username-signup-label {
+    padding-right: 42px;
+}
+
+
+.password-signup-label  {
+    padding-right: 20px;
+}
+
+.username-signup-input,.password-signup-input {
+    outline: none;
+}
+
+.username-signup-input:focus, .password-signup-input:focus {
+    background-color:#deb0ea;
+    padding:0 10px;
+    box-sizing: border-box;
+    border-radius:5px;
+}
+
+
+.user-register-button {
+    background-color: #df82e8;
+    cursor: pointer;
+    margin-left: 82px;;
+}
+
+.close-signup-form-modal {
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-size: 1.2rem;
+}
+
+.close-signup-form-modal:hover {
+    transform: scale(2);
+    cursor: pointer;
+    color:#f00;
+}
+
+
+
+/* ##############################
+############# USER-ICON ############
+ ################################# */
+
+
+ .user-icon-div {
+    
+    width:20%;
+    height: 100%;
+}
+
+.user-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.fa-user {
+    font-size: 2rem;
+  
+}
+
+.fa-user:hover {
+    cursor: pointer;
+}
+
+/* ######## MODAL TO SHOW WHEN USER IS ONLINE ######## */
+
+.settings-modal {
+    position: relative;
+}
+
+
+.online-modal, .online-modal-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:80px;
+    right:10px;
+    width:300px;
+    height:300px;
+    background-color: rgba(205,183,242,0.8);
+}
+
+
+
+.online-modal {
+    visibility: hidden;
+    
+}
+
+.online-modal-show {
+
+    visibility: visible;
+}
+
+.online-modal ul {
+    align-items: center;
+}
+
+.online-modal li {
+    width:100%;
+    height: 40px;
+    font-size: 1.1rem;
+    padding-left:30px;
+    padding-bottom: 30px;
+    
+
+}
+
+.online-modal li:hover {
+    transform:scale(1.2);
+    border:1px solid #ff90aa;
+    background-color: #ff00e5;
+}
+
+.online-modal li:first-child {
+    transform: none;
+    background-color:inherit;
+    border:none;
+
+}
+
