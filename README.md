@@ -1,2 +1,2 @@
 # Project-Shoutout
-A simple chat app.
+A simple chat app UI.
